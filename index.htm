@@ -3,55 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vintovka Pack</title>
+    <title>Vintovka Pack — Ресурспак</title>
     <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            margin: 0;
             font-family: 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(135deg, #1e1e2f 0%, #2d2d44 100%);
+            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
             color: #fff;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 20px;
         }
         .container {
             text-align: center;
-            background: rgba(255,255,255,0.05);
+            background: rgba(255,255,255,0.06);
             padding: 50px 40px;
             border-radius: 20px;
-            border: 1px solid rgba(255,255,255,0.1);
-            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-            max-width: 600px;
+            border: 1px solid rgba(255,255,255,0.12);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+            max-width: 620px;
+            width: 100%;
         }
         h1 {
-            font-size: 2.5em;
-            background: linear-gradient(90deg, #00d4ff, #7b2ff7);
+            font-size: 2.4em;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #43e97b, #38f9d7);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        p { color: #b0b0c0; margin-bottom: 30px; }
+        .subtitle {
+            color: #9fb3c8;
+            font-size: 1em;
+            margin-bottom: 30px;
+        }
         .btn {
             display: inline-block;
-            padding: 15px 40px;
-            font-size: 1.1em;
+            padding: 16px 44px;
+            font-size: 1.15em;
             font-weight: bold;
-            color: #fff;
+            color: #0f2027;
             text-decoration: none;
-            background: linear-gradient(90deg, #00d4ff, #7b2ff7);
+            background: linear-gradient(90deg, #43e97b, #38f9d7);
             border-radius: 50px;
-            box-shadow: 0 5px 20px rgba(123,47,247,0.4);
-            transition: transform .2s;
+            transition: transform .2s, box-shadow .2s;
+            box-shadow: 0 6px 24px rgba(67,233,123,0.4);
         }
-        .btn:hover { transform: translateY(-3px); }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 34px rgba(67,233,123,0.7);
+        }
+        .info {
+            margin-top: 35px;
+            text-align: left;
+            background: rgba(0,0,0,0.25);
+            padding: 20px 25px;
+            border-radius: 12px;
+            font-size: 0.95em;
+            color: #c8d6e5;
+            line-height: 1.7;
+        }
+        .info strong { color: #43e97b; }
+        .info ol { padding-left: 20px; }
+        .footer {
+            margin-top: 25px;
+            font-size: 0.85em;
+            color: #5a6b7b;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Vintovka Pack</h1>
-        <p>Скачайте файл по кнопке ниже.</p>
-        <a href="Vintovka.exe" download class="btn">⬇ Скачать</a>
+        <p class="subtitle">Ресурспак для Minecraft</p>
+
+        <!-- ВАЖНО: Убедитесь, что файл называется именно Vintovka_Pack.zip -->
+        <a href="Vintovka_Pack.zip" download class="btn">
+            ⬇ Скачать ресурспак
+        </a>
+
+        <div class="info">
+            <strong>Как установить:</strong>
+            <ol>
+                <li>Скачайте архив по кнопке выше.</li>
+                <li>Поместите <code>Vintovka_Pack.zip</code> в папку <code>resourcepacks</code>.</li>
+                <li>В игре: <strong>Настройки → Наборы ресурсов</strong> — включите пак.</li>
+            </ol>
+            <p style="margin-top:10px;">Путь к папке: <code>%appdata%\.minecraft\resourcepacks</code> (Windows)</p>
+        </div>
+
+        <div class="footer">© Vintovka Pack</div>
     </div>
 </body>
 </html>
